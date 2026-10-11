@@ -13,7 +13,7 @@ try {
 const money = value => Number.isFinite(value) ? new Intl.NumberFormat('pl-PL', { style: 'currency', currency: 'PLN' }).format(value) : '—';
 const percent = value => Number.isFinite(value) ? new Intl.NumberFormat('pl-PL', { maximumFractionDigits: 2 }).format(value) + '%' : '—';
 document.querySelector('#app').innerHTML = `
-<header class="topbar"><a class="brand" href="/" aria-label="Planer — strona główna"><span class="brand-icon">◔</span> planer<span class="brand-dot">.</span></a><span class="top-label">TWÓJ MARKETING W LICZBACH</span></header>
+<header class="topbar"><a class="brand" href="${import.meta.env.BASE_URL}" aria-label="Planer — strona główna"><span class="brand-icon">◔</span> planer<span class="brand-dot">.</span></a><span class="top-label">TWÓJ MARKETING W LICZBACH</span></header>
 <main><div class="intro"><span class="eyebrow">PLANOWANIE / BUDŻET ROCZNY</span><h1>Dobry plan.<br><span>Większy potencjał.</span></h1><p>Podziel budżet między kanały i sprawdź, jaki zwrot<br class="desktop"> może przynieść Twoja inwestycja.</p></div>
 <div class="workspace"><section class="planner" aria-label="Plan budżetu"><div class="section-heading"><div><span class="step">01</span><h2>Twój roczny budżet</h2></div><span class="badge">PLN</span></div><label class="sr-only" for="budget">Roczny budżet w PLN</label><div class="budget-box"><input id="budget" inputmode="decimal" placeholder="np. 100 000" aria-describedby="budget-error"><span>PLN / rok</span></div><p class="error" id="budget-error"></p>
 <div class="section-heading allocation-heading"><div><span class="step">02</span><h2>Podział na kanały</h2></div></div><p class="hint">Przydziel 100% budżetu i określ oczekiwany ROI.</p>
